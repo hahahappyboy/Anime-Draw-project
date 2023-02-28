@@ -1,4 +1,8 @@
 ﻿namespace CustomStructure {
+    /// <summary>
+    /// 循环链表，用于实现档案循环播放
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class CircularDoubleLinkedListNode<T> {
         //存放的数据
         private T data;
