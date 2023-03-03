@@ -8,6 +8,7 @@ using Info;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Utils;
 using Object = UnityEngine.Object;
  /// <summary>
  /// 整个档案管理的
@@ -53,10 +54,8 @@ public class InstanceZoneManager : BaseMonoBehaviour{
     protected override void GetResources() {
         //获取本地档案Json
         TextAsset zoneTextAsset = Resources.Load<TextAsset>(Config.INSTANCEZONEINFO_JSON_PATH);
-        byte[] zoneReadByte = Encoding.UTF8.GetBytes(zoneTextAsset.text);
-        string zoneString = UTF8Encoding.UTF8.GetString(zoneReadByte);
         //json转化成list
-        instanceZoneInfoList = JsonUtility.FromJson<InstanceZoneInfoItems>(zoneString).instanceZoneInfoList;
+        instanceZoneInfoList = JsonUtils.Json2Class<InstanceZoneInfoItems>(zoneTextAsset.text).instanceZoneInfoList;
     }
 
     /// <summary>

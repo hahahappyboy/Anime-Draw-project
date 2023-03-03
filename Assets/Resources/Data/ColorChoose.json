@@ -1,0 +1,82 @@
+{
+  "colorChooseInfoList": [
+    {
+      "delegateName":"头发",
+      "r": 64,
+      "g": 0,
+      "b": 128,
+      "onehot": 0
+    },
+    {
+      "delegateName":"耳朵",
+      "r": 128,
+      "g": 128,
+      "b": 128,
+      "onehot": 1
+    },
+    {
+      "delegateName":"眼睛",
+      "r": 64,
+      "g": 0,
+      "b": 0,
+      "onehot": 2
+    },
+    {
+      "delegateName":"眉毛",
+      "r": 192,
+      "g": 0,
+      "b": 0,
+      "onehot": 3
+    },
+    {
+      "delegateName":"皮肤",
+      "r": 0,
+      "g": 128,
+      "b": 128,
+      "onehot": 4
+    },
+    {
+      "delegateName":"装饰",
+      "r": 0,
+      "g": 0,
+      "b": 128,
+      "onehot": 5
+    },
+    {
+      "delegateName":"嘴巴",
+      "r": 64,
+      "g": 128,
+      "b": 0,
+      "onehot": 6
+    },
+    {
+      "delegateName":"衣服",
+      "r": 128,
+      "g": 128,
+      "b": 0,
+      "onehot": 7
+    },
+    {
+      "delegateName":"鼻子",
+      "r": 192,
+      "g": 128,
+      "b": 0,
+      "onehot": 8
+    },
+    {
+      "delegateName":"脸蛋",
+      "r": 128,
+      "g": 0,
+      "b": 128,
+      "onehot": 9
+    },
+    {
+      "delegateName":"背景",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "onehot": 10
+    }
+    
+  ]
+}

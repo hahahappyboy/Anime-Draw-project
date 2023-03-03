@@ -4,6 +4,7 @@ Shader "Unlit/VideoPlayerShader"
     {
         _MainTex ("主纹理", 2D) = "white" {}
         _MaskTex_Hor ("遮罩纹理水平", 2D) = "white" {}
+        _TransRatio("透明倍率",float) = 1.5
     }
     SubShader
     {   
@@ -26,6 +27,7 @@ Shader "Unlit/VideoPlayerShader"
             sampler2D _MaskTex_Hor;
             float4 _MaskTex_Hor_ST;
 
+            float _TransRatio;
             
             struct c2v
             {
@@ -56,7 +58,7 @@ Shader "Unlit/VideoPlayerShader"
                 // sample the texture
                 fixed4 col_main = tex2D(_MainTex, i.uv_main);
                 fixed4 col_mask = tex2D(_MaskTex_Hor, i.uv_mask);
-                col_main.a =  col_mask.a;
+                col_main.a =  col_mask.a*_TransRatio;
                 return col_main.rgba;
             }
             ENDCG
