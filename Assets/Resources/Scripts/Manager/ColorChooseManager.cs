@@ -32,7 +32,7 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
     protected override void GetResources() {
         colorChooseControllerList = new List<IObserver>();
         //获取颜色选择信息的json数据，和item预制体
-        ColorChooseItemGameObject = Resources.Load<GameObject>("Prefab/ColorChooseItem");
+        ColorChooseItemGameObject = Resources.Load<GameObject>(Config.COLOR_CHOOSE_ITEM_PREFAB_PATH);
         TextAsset colorInfoTextAsset = Resources.Load<TextAsset>(Config.COLORCHOOSEINFO_JSON_PATH);
         colorChooseInfoList = JsonUtils.Json2Class<ColorChooseInfoItems>(colorInfoTextAsset.text).colorChooseInfoList;
     }
@@ -46,14 +46,16 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
             controller.SetColorChooseInfo(colorChooseInfoList[i]);
             //添加观察者
             AddObserver(controller);
-            if (i==0) {
-                Dictionary<string, object> message = new Dictionary<string, object>();
-                message.Add("color",controller.colorInfo.color);
-                message.Add("onehot",controller.colorInfo.onehot);
-                //默认刚进来就是点击第0个
-                NotifyObserver(message);
-            }
             
+            
+        }
+        //默认刚进来就是点击第0个
+        if (colorChooseInfoList.Count!=0) {
+            var colorChooseController = colorChooseControllerList[0] as ColorChooseController;
+            Dictionary<string, object> message = new Dictionary<string, object>();
+            message.Add("color",colorChooseController.colorInfo.color);
+            message.Add("onehot",colorChooseController.colorInfo.onehot);
+            NotifyObserver(message);
         }
     }
   

@@ -61,7 +61,7 @@ public class VidoPlayController : BaseMonoBehaviour {
     //初始化界面
     protected override void InitZoneLayout() {
         _videoPlayer.isLooping = true;
-        _videoPlayer.audioOutputMode = VideoAudioOutputMode.Direct;
+        _videoPlayer.audioOutputMode = VideoAudioOutputMode.None;
         _videoPlayer.clip = null;
         _rawImage.enabled = false;
     }

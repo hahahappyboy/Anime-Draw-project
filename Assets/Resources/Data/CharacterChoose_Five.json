@@ -2,32 +2,32 @@
   "characterChooseInfoList": [
     {
       "characterName":"三玖",
-      "characterImageURL": "Texture2D/Character/三玖",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_三玖",
       "characterID": 3
     },
     {
       "characterName":"二乃",
-      "characterImageURL": "Texture2D/Character/二乃",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_二乃",
       "characterID": 2
     },
     {
       "characterName":"一花",
-      "characterImageURL": "Texture2D/Character/一花",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_一花",
       "characterID": 1
     },
     {
       "characterName":"四叶",
-      "characterImageURL": "Texture2D/Character/四叶",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_四叶",
       "characterID": 4
     },
     {
       "characterName":"五月",
-      "characterImageURL": "Texture2D/Character/五月",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_五月",
       "characterID": 5
     },
     {
       "characterName":"风太郎",
-      "characterImageURL": "Texture2D/Character/风太郎",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_风太郎",
       "characterID": 7
     }
     
