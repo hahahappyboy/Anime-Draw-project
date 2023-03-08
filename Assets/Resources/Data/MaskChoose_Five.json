@@ -1,0 +1,240 @@
+{
+  "maskChooseInfoList": [
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/208"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/259"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/273"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/330"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/372"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/375"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/465"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/477"
+    },
+    {
+      "characterID":3,
+      "maskName":"三玖",
+      "maskImageURL": "Texture2D/Mask/Five/3/533"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/2/176"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/2/200"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/2/223"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/230"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/373"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/379"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/481"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/484"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/493"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/507"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/561"
+    },
+    {
+      "characterID":2,
+      "maskName":"二乃",
+      "maskImageURL": "Texture2D/Mask/Five/3/575"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/238"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/326"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/525"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/562"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/592"
+    },
+    {
+      "characterID":1,
+      "maskName":"一花",
+      "maskImageURL": "Texture2D/Mask/Five/1/667"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/248"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/302"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/412"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/430"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/540"
+    },
+    {
+      "characterID":4,
+      "maskName":"四叶",
+      "maskImageURL": "Texture2D/Mask/Five/4/624"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/28"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/142"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/160"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/195"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/199"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/371"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/425"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/435"
+    },
+    {
+      "characterID":5,
+      "maskName":"五月",
+      "maskImageURL": "Texture2D/Mask/Five/5/461"
+    },
+    {
+      "characterID":7,
+      "maskName":"风太郎",
+      "maskImageURL": "Texture2D/Mask/Five/5/141"
+    },
+    {
+      "characterID":7,
+      "maskName":"风太郎",
+      "maskImageURL": "Texture2D/Mask/Five/5/194"
+    },
+    {
+      "characterID":7,
+      "maskName":"风太郎",
+      "maskImageURL": "Texture2D/Mask/Five/5/301"
+    },
+    {
+      "characterID":7,
+      "maskName":"风太郎",
+      "maskImageURL": "Texture2D/Mask/Five/5/391"
+    },
+    {
+      "characterID":7,
+      "maskName":"风太郎",
+      "maskImageURL": "Texture2D/Mask/Five/5/473"
+    }
+    
+  ]
+}

@@ -36,7 +36,9 @@ public class CharacterChooseController : BaseMonoBehaviour,IObserver,IPointerCli
     
     protected override void FetchComponent() {
         bgImage = GetComponent<Image>();
-        bgImageOriginalColor = bgImage.material.color;
+        Color bgColor = bgImage.material.color;
+        bgColor.a = 155f / 255f;
+        bgImageOriginalColor = bgColor;
         bgImageOriginalHegihtWidth = bgImage.rectTransform.sizeDelta;
         characterImage = transform.Find("CharacterMask/CharacterImage").GetComponent<Image>();
     }

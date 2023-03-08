@@ -5,40 +5,32 @@
       "zoneVideoURL": "Video/Video_ErNai",
       "zoneTextCN":"五等分的新娘",
       "zoneTextJP":"五等分の花嫁",
-      "zoneTextID":"10001",
-      "zoneVideoeURL":"",
-      "isLock":false,
-      "zoneGenPeopleName":["一花","二乃"]
+      "zoneID":"10001",
+      "isLock":false
     },
     {
       "zoneImageURL": "Texture2D/BackGround/bg_Darling",
       "zoneVideoURL": "Video/Video_Darling",
       "zoneTextCN": "国家队",
       "zoneTextJP": "DARLING in the FRANXX",
-      "zoneTextID": "10002",
-      "zoneVideoeURL": "",
-      "isLock": false,
-      "zoneGenPeopleName":["广","02"]
+      "zoneID": "10002",
+      "isLock": false
     },
     {
       "zoneImageURL": "Texture2D/BackGround/bg_April",
       "zoneVideoURL": "Video/Video_FriendA",
       "zoneTextCN": "四月是你的谎言",
       "zoneTextJP": "四月は君の嘘",
-      "zoneTextID": "10004",
-      "zoneVideoeURL": "",
-      "isLock": false,
-      "zoneGenPeopleName":["公生"]
+      "zoneID": "10003",
+      "isLock": false
     },
     {
       "zoneImageURL": "Texture2D/BackGround/bg_Violet",
       "zoneVideoURL": "Video/Video_FriendA",
       "zoneTextCN": "紫罗兰永恒花园",
       "zoneTextJP": "ヴァイオレット",
-      "zoneTextID": "10003",
-      "zoneVideoeURL": "",
-      "isLock": true,
-      "zoneGenPeopleName":["薇尔莉特"]
+      "zoneID": "10004",
+      "isLock": true
     }
   ]
 }

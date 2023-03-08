@@ -15,11 +15,9 @@ namespace Info {
         //档案的日文信息
         public string zoneTextJP;
         //档案的编号 
-        public string zoneTextID;
+        public string zoneID;
         //动画URL
         public string zoneVideoURL;
-        //可生成的人物 人物名
-        public List<string> zoneGenPeopelName;
         //是否锁住
         public bool isLock;
     }
