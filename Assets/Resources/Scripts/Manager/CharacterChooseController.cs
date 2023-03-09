@@ -120,6 +120,5 @@ public class CharacterChooseController : BaseMonoBehaviour,IObserver,IPointerCli
         message.Add("isClick",false);
         message.Add("isPointerEnter",false);
         CharacterChooseManager.instance.NotifyObserver(message);
-    
     }
 }

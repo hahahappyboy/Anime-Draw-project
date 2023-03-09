@@ -46,8 +46,6 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
             controller.SetColorChooseInfo(colorChooseInfoList[i]);
             //添加观察者
             AddObserver(controller);
-            
-            
         }
         //默认刚进来就是点击第0个
         if (colorChooseInfoList.Count!=0) {
@@ -58,8 +56,6 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
             NotifyObserver(message);
         }
     }
-  
-    
     
     # region 观察者设计模式
     public void AddObserver(IObserver observer) {

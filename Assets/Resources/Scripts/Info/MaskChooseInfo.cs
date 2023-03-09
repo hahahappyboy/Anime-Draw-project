@@ -6,8 +6,8 @@ namespace Info {
     /// </summary>
     [System.Serializable]
     public class MaskChooseInfo {
-        //人物ID
-        public string characterID;
+        //角色ID=characterChooseInfo里的id
+        public int characterID;
        //人物名
        public string maskName;
        //MaskURL

@@ -10,7 +10,9 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
     #region 属性
     //角色选择预制体
     private GameObject characterChoosePrefab;
+    //characterInfo信息从json获得的
     private List<CharacterChooseInfo> characterInfoList;
+    //观察者信息
     private List<IObserver> observerList;
     //单例
     public static CharacterChooseManager instance;
@@ -43,10 +45,19 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
             CharacterChooseController controller = characterChooseGameObject.GetComponent<CharacterChooseController>();
             controller.SetCharacterInfo(characterInfoList[i]);
             AddObserver(controller);
+            
         }
+     
         //默认刚进来就是点击第0个
         if (characterInfoList.Count != 0) {
-            var controller = observerList[0] as CharacterChooseController;
+            CharacterChooseController controller = null;
+            //找到第一个CharacterChooseController，并设为默认点击
+            for (int i = 0; i < observerList.Count; i++) {
+                if (observerList[i] is CharacterChooseController) {
+                    controller = observerList[i] as CharacterChooseController;
+                    break;
+                }
+            }
             Dictionary<string, object> message = new Dictionary<string, object>();
             message.Add("characterID",controller.characterChooseInfo.characterID);
             message.Add("isClick",true);

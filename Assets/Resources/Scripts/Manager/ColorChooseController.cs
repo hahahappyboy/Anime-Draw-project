@@ -15,14 +15,13 @@ public class ColorChooseController : BaseMonoBehaviour,IPointerClickHandler,IObs
     public Image ColorBgImage;
     //框Image
     public Image colorFrameImage;
-    //它的RGB
-    public ColorChooseInfo colorInfo;
     # endregion
 
     #region 属性
     //背景透明度
     private const float BG_TRANSPARENT = 90;
-    
+    //它的RGB
+    public ColorChooseInfo colorInfo;
     #endregion
     
     
