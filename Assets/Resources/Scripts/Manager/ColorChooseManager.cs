@@ -40,8 +40,8 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
     protected override void InitZoneLayout() {
         //初始化colorchoose
         for (int i = 0; i < colorChooseInfoList.Count; i++) {
-            GameObject colorChooseItem = Instantiate(ColorChooseItemGameObject);
-            colorChooseItem.transform.SetParent(this.transform);
+            GameObject colorChooseItem = Instantiate(ColorChooseItemGameObject,this.transform);
+            transform.transform.localScale = Vector3.one;
             ColorChooseController controller = colorChooseItem.GetComponent<ColorChooseController>();
             controller.SetColorChooseInfo(colorChooseInfoList[i]);
             //添加观察者

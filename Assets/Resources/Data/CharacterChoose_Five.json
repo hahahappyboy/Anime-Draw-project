@@ -1,14 +1,14 @@
 {
   "characterChooseInfoList": [
     {
-      "characterName":"三玖",
-      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_三玖",
-      "characterID": 3
-    },
-    {
       "characterName":"二乃",
       "characterImageURL": "Texture2D/Character/Five/五等分的新娘_二乃",
       "characterID": 2
+    },
+    {
+      "characterName":"三玖",
+      "characterImageURL": "Texture2D/Character/Five/五等分的新娘_三玖",
+      "characterID": 3
     },
     {
       "characterName":"一花",

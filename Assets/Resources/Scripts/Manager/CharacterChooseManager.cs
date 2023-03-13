@@ -40,8 +40,8 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
 
     protected override void InitZoneLayout() {
         for (int i = 0; i < characterInfoList.Count; i++) {
-            GameObject characterChooseGameObject = Instantiate(characterChoosePrefab);
-            characterChooseGameObject.transform.SetParent(this.transform);
+            GameObject characterChooseGameObject = Instantiate(characterChoosePrefab,this.transform);
+            characterChooseGameObject.transform.localScale = Vector3.one;
             CharacterChooseController controller = characterChooseGameObject.GetComponent<CharacterChooseController>();
             controller.SetCharacterInfo(characterInfoList[i]);
             AddObserver(controller);

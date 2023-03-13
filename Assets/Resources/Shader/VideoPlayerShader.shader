@@ -59,6 +59,10 @@ Shader "Unlit/VideoPlayerShader"
                 fixed4 col_main = tex2D(_MainTex, i.uv_main);
                 fixed4 col_mask = tex2D(_MaskTex_Hor, i.uv_mask);
                 col_main.a =  col_mask.a*_TransRatio;
+                if (col_main.a>1)
+                {
+                    col_main.a = 1;
+                }
                 return col_main.rgba;
             }
             ENDCG

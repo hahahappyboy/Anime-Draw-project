@@ -69,6 +69,7 @@ public class InstanceZoneManager : BaseMonoBehaviour{
         for (int i = 0; i < instanceZoneInfoList.Count; i++) {
             GameObject zoneLayoutGO = Instantiate(zoneLayoutPrefab, zonesParent) as GameObject;
             zoneLayoutGO.name = instanceZoneInfoList[i].zoneTextCN;
+            zoneLayoutGO.transform.localScale = Vector3.one;
             InstanceZoneController zoneController = zoneLayoutGO.GetComponent<InstanceZoneController>();
             zoneController.SetZoneInfo(instanceZoneInfoList[i]);
             //加入循环链表

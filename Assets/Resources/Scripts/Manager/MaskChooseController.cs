@@ -20,6 +20,7 @@ public class MaskChooseController : BaseMonoBehaviour
     protected override void FetchComponent() {
         maskBGImage = this.GetComponent<Image>();
         maskImage = this.transform.Find("MaskImage").GetComponent<Image>();
+        
     }
     /// <summary>
     /// 设置mask信息
@@ -29,6 +30,7 @@ public class MaskChooseController : BaseMonoBehaviour
         maskChooseInfo = info;
         Sprite sprite = Resources.Load<Sprite>(maskChooseInfo.maskImageURL);
         maskImage.sprite = sprite;
+        this.transform.localScale = Vector3.one;
     }
     
     protected override void GetResources() {

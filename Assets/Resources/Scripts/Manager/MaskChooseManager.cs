@@ -83,5 +83,9 @@ public class MaskChooseManager : BaseMonoBehaviour,IObserver
             controller.transform.SetParent(prefabFather);
             currentShowMaskController.Add(controller);
         }
+        //将展示的缩放设置为1
+        for (int i = 0; i < currentShowMaskController.Count; i++) {
+            currentShowMaskController[i].transform.localScale = Vector3.one;
+        }
     }
 }
