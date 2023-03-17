@@ -74,6 +74,9 @@ public class ColorChooseManager : BaseMonoBehaviour,INotifier
         foreach (var colorChooseController in colorChooseControllerList) {
             colorChooseController.Notify(message);
         }
+        //通知maskdraw颜色改变了
+        MaskDrawManager.instance.penColour = currentChooseColor_255;
+
     }
 
     # endregion
