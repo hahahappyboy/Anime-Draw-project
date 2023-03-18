@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class ToolsManager : BaseMonoBehaviour {
+public class DrawToolsManager : BaseMonoBehaviour {
         
     private Button penButton;
     private Button brushButton;
@@ -16,12 +16,10 @@ public class ToolsManager : BaseMonoBehaviour {
     private Slider penSlider;
 
     private Color originalButtonColor;
-    private Color pressButtonColor;
+    private Color pressButtonColor = new Color(0, 0, 245/255f, 128/255f);
 
  
     protected override void FetchComponent() {
-        pressButtonColor = new Color(0, 0, 245/255f, 128/255f);
-        
         penButton = transform.Find("Pen Button").GetComponent<Button>();
         originalButtonColor = penButton.GetComponent<Image>().color;
         
@@ -60,17 +58,16 @@ public class ToolsManager : BaseMonoBehaviour {
     private void ButtonListenerBrushButton() {
         brushButton.GetComponent<Image>().color = pressButtonColor;
         penButton.GetComponent<Image>().color = originalButtonColor;
-        
         MaskDrawManager.instance.SetToolType(PenType.Brush);
     }
     private void ButtonListenerSaveButton() {
         
     }
     private void ButtonListenerUndoButton() {
-        
+        MaskDrawManager.instance.Undo();
     }
     private void ButtonListenerDefaultButton() {
-       
+        MaskDrawManager.instance.Default();
     }
     #endregion
     
