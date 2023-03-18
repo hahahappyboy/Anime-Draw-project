@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Info;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +24,7 @@ public class MaskDrawManager : BaseMonoBehaviour
     //笔的颜色
     public  Color32 penColour;
     //笔的宽度
-    public  int penWidth;
+    private  int penWidth=3;
     //之前画的位置，默认为0，0
     private Vector2 previousDragPosition = Vector2.zero;
     //存放最初的颜色数组
@@ -84,7 +85,10 @@ public class MaskDrawManager : BaseMonoBehaviour
         //存入之前画的
         if (Input.GetMouseButtonUp(0) && isDraging) {
             isDraging = false;
-            savePixelStack.Push(previousColorArray);
+            //判断前后两个数组是否相等，如果相等就不进栈
+            if (!Enumerable.SequenceEqual(previousColorArray, currentColorArray)) {
+                savePixelStack.Push(previousColorArray);
+            }
         }
     }
     
@@ -124,7 +128,10 @@ public class MaskDrawManager : BaseMonoBehaviour
         }
         
     }
-    
+
+    public void SetPenWidth(int value) {
+        penWidth = value;
+    }
     # endregion
     
     # region 画图
@@ -320,4 +327,6 @@ public class MaskDrawManager : BaseMonoBehaviour
         maskTexture2D.Apply();
     }
     # endregion
+    
+    
 }
