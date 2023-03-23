@@ -6,11 +6,8 @@ public static class Config {
     public const string INSTANCEZONEINFO_JSON_PATH = "Data/InstanceZone";
     //颜色信息的Json数据
     public const string COLORCHOOSEINFO_JSON_PATH = "Data/ColorChoose";
-    //角色信息的Json数据
-    public const string CHARACTERCHOOSEINFO_FIVE_JSON_PATH ="Data/CharacterChoose_Five";
-    //Mask信息的Json数据
-    public const string MASKCHOOSEINFO_FIVE_JSON_PATH ="Data/MaskChoose_Five";
     
+    # region Prefabs
     //档案Prefab地址
     public const string ZONE_LAYOUT_PREFAB_PATH = "Prefab/Zone Layout";
     //颜色选择Prefab地址
@@ -19,9 +16,32 @@ public static class Config {
     public const string CHARACTER_CHOOSE_ITEM_PREFAB_PATH = "Prefab/CharacterChooseItem";
     //MaskPrefab地址
     public const string MASK_CHOOSE_ITEM_PREFAB_PATH = "Prefab/MaskChooseItem";
-
-
+    # endregion
+    
+    //HTTP请求地址
+    public const string POST_HTTP_URL = "http://172.22.127.102:5000/AnimeDraw";
+    //图像下载地址
+    public const string DOWNLOAD_HTTP_URL = "http://172.22.127.102:5000";
+    
+    # region 五等分
+    //角色信息的Json数据
+    public const string CHARACTERCHOOSEINFO_FIVE_JSON_PATH ="Data/Five/CharacterChoose_Five";
+    //Mask信息的Json数据
+    public const string MASKCHOOSEINFO_FIVE_JSON_PATH ="Data/Five/MaskChoose_Five";
+    //模型ID
+    public const string MODEL_ID_FIVE = "five";
+    # endregion
+    
+    # region 国家队
+    //角色信息的Json数据
+    public const string CHARACTERCHOOSEINFO_DARLING_JSON_PATH ="Data/Darling/CharacterChoose_Darling";
+    //Mask信息的Json数据
+    public const string MASKCHOOSEINFO_DARLING_JSON_PATH ="Data/Darling/MaskChoose_Darling";
+    //模型ID
+    public const string MODEL_ID_DARLING = "darling";
+    # endregion
+    
+    
     
 
-    
 }

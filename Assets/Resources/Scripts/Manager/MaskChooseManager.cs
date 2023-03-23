@@ -35,7 +35,7 @@ public class MaskChooseManager : BaseMonoBehaviour,IObserver
         maskChooseItemDic = new Dictionary<int, List<MaskChooseInfo>>();
         currentShowMaskController = new List<MaskChooseController>();
         
-        TextAsset maskInfoTextAsset = Resources.Load<TextAsset>(Config.MASKCHOOSEINFO_FIVE_JSON_PATH);
+        TextAsset maskInfoTextAsset = Resources.Load<TextAsset>(SceneDataManager.GetInstance().GetMaskJsonPath());
         List<MaskChooseInfo> maskInfoList =  JsonUtils.Json2Class<MaskChooseInfoItems>(maskInfoTextAsset.text).maskChooseInfoList;
         //把信息按ID分类
         foreach (var item in maskInfoList) {

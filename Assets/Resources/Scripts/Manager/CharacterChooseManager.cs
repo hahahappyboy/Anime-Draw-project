@@ -17,7 +17,7 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
     //单例
     public static CharacterChooseManager instance;
     //目前选中的角色ID
-    private int cuurentChooseCharacterID;
+    private int currentChooseCharacterID;
     #endregion
 
     protected override void Awake() {
@@ -33,7 +33,7 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
         observerList = new List<IObserver>();
         characterChoosePrefab = Resources.Load<GameObject>(Config.CHARACTER_CHOOSE_ITEM_PREFAB_PATH);
         //获取角色信息
-        TextAsset characterInfoTextAsset = Resources.Load<TextAsset>(Config.CHARACTERCHOOSEINFO_FIVE_JSON_PATH);
+        TextAsset characterInfoTextAsset = Resources.Load<TextAsset>(SceneDataManager.GetInstance().GetCharacterChooseJsonPath());
         characterInfoList =  JsonUtils.Json2Class<CharacterChooseInfoItems>(characterInfoTextAsset.text).characterChooseInfoList;
     }
     
@@ -61,6 +61,7 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
             Dictionary<string, object> message = new Dictionary<string, object>();
             message.Add("characterID",controller.characterChooseInfo.characterID);
             message.Add("isClick",true);
+            currentChooseCharacterID = controller.characterChooseInfo.characterID;
             NotifyObserver(message);
         }
     }
@@ -78,11 +79,15 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
         bool isClick = message["isClick"] is bool ? (bool)message["isClick"] : false;
         //判断是否为点击了的消息，还是说只是鼠标进入的消息
         if (isClick) {
-            cuurentChooseCharacterID = characterID;
+            currentChooseCharacterID = characterID;
         }
         foreach (var observer in observerList) {
             observer.Notify(message);
         }
     }
     # endregion
+
+    public int GetCurrentChooseCharacterID() {
+        return currentChooseCharacterID;
+    }
 }

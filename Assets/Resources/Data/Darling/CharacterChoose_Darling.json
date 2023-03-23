@@ -1,0 +1,35 @@
+{
+  "characterChooseInfoList": [
+    {
+      "characterName":"02",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_02",
+      "characterID": 0
+    },
+    {
+      "characterName":"莓",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_莓",
+      "characterID": 12
+    },
+    {
+      "characterName":"心",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_心",
+      "characterID": 7
+    },
+    {
+      "characterName":"广",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_广",
+      "characterID": 5
+    },
+    {
+      "characterName":"五郎",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_五郎",
+      "characterID": 2
+    },
+    {
+      "characterName":"满",
+      "characterImageURL": "Texture2D/Character/Darling/国家队_满",
+      "characterID": 9
+    }
+    
+  ]
+}

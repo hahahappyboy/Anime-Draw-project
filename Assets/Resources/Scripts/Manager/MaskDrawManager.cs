@@ -13,8 +13,8 @@ public class MaskDrawManager : BaseMonoBehaviour
     public Sprite maskSprite;
     //mask的纹理
     private Texture2D maskTexture2D;
-    
     # endregion
+    
     # region 属性
 
     //当前选中的工具类型
@@ -78,8 +78,9 @@ public class MaskDrawManager : BaseMonoBehaviour
             previousDragPosition = Vector2.zero;
         } 
         //一键变色
-        bool mouseDown = Input.GetMouseButton(0);
-        if (mouseDown && penType == PenType.Brush) {
+        bool mouseDown = Input.GetMouseButtonDown(0);
+        bool rightMouseDown = Input.GetMouseButtonDown(1);//右键快捷键变色
+        if ((mouseDown && penType == PenType.Brush) ||rightMouseDown) {
             Brush();
         }
         //存入之前画的
@@ -89,6 +90,10 @@ public class MaskDrawManager : BaseMonoBehaviour
             if (!Enumerable.SequenceEqual(previousColorArray, currentColorArray)) {
                 savePixelStack.Push(previousColorArray);
             }
+        }
+        //ctrl+z 撤回
+        if (Input.GetKey(KeyCode.LeftControl)&&Input.GetKeyDown(KeyCode.Z)) {
+            Undo();
         }
     }
     
@@ -327,6 +332,8 @@ public class MaskDrawManager : BaseMonoBehaviour
         maskTexture2D.Apply();
     }
     # endregion
-    
-    
+
+    public Texture2D GetMaskTexture() {
+        return maskTexture2D;
+    }
 }
