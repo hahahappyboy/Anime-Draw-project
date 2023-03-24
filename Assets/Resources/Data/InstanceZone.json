@@ -25,11 +25,19 @@
       "isLock": false
     },
     {
+      "zoneImageURL": "Texture2D/BackGround/bg_Flower",
+      "zoneVideoURL": "Video/Video_FriendA",
+      "zoneTextCN": "未闻花名",
+      "zoneTextJP": "めんま见つけた",
+      "zoneID": "10004",
+      "isLock": true
+    },
+    {
       "zoneImageURL": "Texture2D/BackGround/bg_Violet",
       "zoneVideoURL": "Video/Video_FriendA",
       "zoneTextCN": "紫罗兰永恒花园",
       "zoneTextJP": "ヴァイオレット",
-      "zoneID": "10004",
+      "zoneID": "10005",
       "isLock": true
     }
   ]

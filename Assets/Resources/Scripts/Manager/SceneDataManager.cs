@@ -13,13 +13,8 @@ public class SceneDataManager : BaseSingleTon<SceneDataManager>
     private Dictionary<string, object> sceneOneshotData = null;
     //选择的档案
     private InstanceZoneInfo zoneInfo;
-    
-
     //设置数据
     private void WriteSceneData(Dictionary<string, object> data) {
-        if (sceneOneshotData != null) {
-            Debug.LogError("切换数据不为空，上一次切换场景的数据没有被读取");
-        }
         sceneOneshotData = data;
         zoneInfo = (InstanceZoneInfo)sceneOneshotData["instanceZoneInfo"];
     }
@@ -36,8 +31,10 @@ public class SceneDataManager : BaseSingleTon<SceneDataManager>
         //加载新场景
         SceneManager.LoadScene(sceneName);
     }
-    
-    
+    public void ToNewScene(string sceneName) {
+        //加载新场景
+        SceneManager.LoadScene(sceneName);
+    }
     /// <summary>
     /// 获取当前选择档案的mask的json path
     /// </summary>

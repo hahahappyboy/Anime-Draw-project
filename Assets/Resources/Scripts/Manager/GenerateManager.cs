@@ -38,19 +38,35 @@ public class GenerateManager : BaseMonoBehaviour {
             Texture2D texture = MaskDrawManager.instance.GetMaskTexture();
             //当前选中的角色
             int label_class = CharacterChooseManager.instance.GetCurrentChooseCharacterID();
+            //当前选择的模型
+            string model_id = SceneDataManager.GetInstance().GetModelID();
+            
             form.AddBinaryData("label_img",texture.EncodeToPNG());
-            form.AddField("model_id", "five");
+            form.AddField("model_id", model_id);
             form.AddField("label_class", label_class);
             UnityWebRequest www = UnityWebRequest.Post(Config.POST_HTTP_URL, form);
             yield return www.SendWebRequest();
-            string responseText = www.downloadHandler.text;
-            //获取图像
-            www = UnityWebRequestTexture.GetTexture(Config.DOWNLOAD_HTTP_URL+responseText);
-            yield return www.SendWebRequest();
-            texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            Sprite sprite = Sprite.Create(texture, new Rect( 0 ,0, texture.width, texture.height), Vector2.zero);
-            image.sprite = sprite;
-            // Debug.Log("服务器返回值" + responseText);
+            if (www.isDone) {
+                if (www.result == UnityWebRequest.Result.ConnectionError ||
+                    www.result == UnityWebRequest.Result.ProtocolError) {
+                    Debug.LogWarning(www.error);
+                } else {
+                    string responseText = www.downloadHandler.text;
+                    //获取图像
+                    www = UnityWebRequestTexture.GetTexture(Config.DOWNLOAD_HTTP_URL+responseText);
+                    yield return www.SendWebRequest();
+                    if (www.isDone) {
+                        if (www.result == UnityWebRequest.Result.ConnectionError ||
+                            www.result == UnityWebRequest.Result.ProtocolError) {
+                            Debug.LogWarning(www.error);
+                        } else {
+                            texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                            Sprite sprite = Sprite.Create(texture, new Rect( 0 ,0, texture.width, texture.height), Vector2.zero);
+                            image.sprite = sprite;
+                        }
+                    }
+                }
+            }
         }
     }
 
