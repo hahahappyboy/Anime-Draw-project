@@ -2,6 +2,9 @@
 /// 参数配置
 /// </summary>
 public static class Config {
+    //Lua文件路ing
+    public const string LUA_PATH = "/Resources/Lua/";
+        
     //本地档案Json数据地址
     public const string INSTANCEZONEINFO_JSON_PATH = "Data/InstanceZone";
     //颜色信息的Json数据

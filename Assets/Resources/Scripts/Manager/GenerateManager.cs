@@ -3,8 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using XLua;
 
+/// <summary>
+/// 生成图像的代码s
+/// </summary>
+
+[CSharpCallLua]
+public delegate void LifeCycle();
+public class LuaGenerateManager {
+    public LifeCycle start;
+    public LifeCycle awake;
+    
+}
 public class GenerateManager : BaseMonoBehaviour {
+    //Lua的GenerateManager中的Table
+    private LuaGenerateManager luaGenerateManager;
     private Image image;
     //延迟发送请求的时间
     private float DELAY_POST_TIME = 4f;
@@ -12,10 +26,25 @@ public class GenerateManager : BaseMonoBehaviour {
         image = this.GetComponent<Image>();
     }
 
-    protected override void GetResources() {
-        //疫苗后开始发请求
-        Invoke("Send", DELAY_POST_TIME);
+    protected override void GetResources() {//在Awake里执行
+        //调lua文件
+        XLuaManager.Instance.DoString("require('generate_manager')");
+        //得到table
+        luaGenerateManager = XLuaManager.Instance.Global.Get<LuaGenerateManager>("generate_manager");
         
+        //疫苗后开始发请求
+        // Invoke("Send", DELAY_POST_TIME);
+
+    }
+
+    protected override void Awake() {
+        base.Awake();
+        luaGenerateManager.awake();
+    }
+
+    protected override void Start() {
+        base.Start();
+        luaGenerateManager.start();
     }
 
     protected override void InitZoneLayout() {
