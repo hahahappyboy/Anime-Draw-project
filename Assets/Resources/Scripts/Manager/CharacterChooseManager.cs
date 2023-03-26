@@ -19,7 +19,9 @@ public class CharacterChooseManager : BaseMonoBehaviour,INotifier {
     //目前选中的角色ID
     private int currentChooseCharacterID;
     #endregion
-
+    
+    
+    
     protected override void Awake() {
         base.Awake();
         instance = this;

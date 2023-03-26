@@ -22,9 +22,9 @@ public static class Config {
     # endregion
     
     //HTTP请求地址
-    public const string POST_HTTP_URL = "http://172.22.127.102:5000/AnimeDraw";
+    public const string POST_HTTP_URL = DOWNLOAD_HTTP_URL+"AnimeDraw";
     //图像下载地址
-    public const string DOWNLOAD_HTTP_URL = "http://172.22.127.102:5000";
+    public const string DOWNLOAD_HTTP_URL = "http://192.168.42.130:5000/";
     
     # region 五等分
     //角色信息的Json数据
