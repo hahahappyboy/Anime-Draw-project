@@ -4,7 +4,7 @@
 public static class Config {
     //Lua文件路ing
     public const string LUA_PATH = "/Resources/Lua/";
-        
+    
     //本地档案Json数据地址
     public const string INSTANCEZONEINFO_JSON_PATH = "Data/InstanceZone";
     //颜色信息的Json数据
@@ -24,7 +24,7 @@ public static class Config {
     //HTTP请求地址
     public const string POST_HTTP_URL = DOWNLOAD_HTTP_URL+"AnimeDraw";
     //图像下载地址
-    public const string DOWNLOAD_HTTP_URL = "http://192.168.42.130:5000/";
+    public const string DOWNLOAD_HTTP_URL = "http://172.22.194.181:5000/";
     
     # region 五等分
     //角色信息的Json数据

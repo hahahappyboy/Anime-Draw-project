@@ -15,6 +15,9 @@ public class ColorChooseController : BaseMonoBehaviour,IPointerClickHandler,IObs
     public Image ColorBgImage;
     //框Image
     public Image colorFrameImage;
+    
+    //音乐播放
+    public AudioSource audioSource;
     # endregion
 
     #region 属性
@@ -29,6 +32,7 @@ public class ColorChooseController : BaseMonoBehaviour,IPointerClickHandler,IObs
         delegateNameTexture = this.transform.Find("ColorName").GetComponent<Text>();
         ColorBgImage = this.transform.Find("ColorBG").GetComponent<Image>();
         colorFrameImage = this.transform.Find("ColorFrame").GetComponent<Image>();
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     public void SetColorChooseInfo(ColorChooseInfo colorInfo) {
@@ -70,6 +74,8 @@ public class ColorChooseController : BaseMonoBehaviour,IPointerClickHandler,IObs
         message.Add("color",colorInfo.color);
         message.Add("onehot",colorInfo.onehot);
         ColorChooseManager.instance.NotifyObserver(message);
+        audioSource.clip = MusicManager.instance.GetAudioClip(MusicType.ButtonClick2);
+        audioSource.Play();
     }
 
    

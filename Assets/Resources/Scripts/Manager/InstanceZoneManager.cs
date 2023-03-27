@@ -86,8 +86,14 @@ public class InstanceZoneManager : BaseMonoBehaviour{
         zonesParent = this.transform.Find("Viewport/Content").transform;
         zoneLeftMoveButton = this.transform.Find("Instance Zones Right Button").GetComponent<Button>();
         zoneLeftMoveButton.onClick.AddListener(ButtonSlideLeft);
+        //设置点击播放的音乐
+        zoneLeftMoveButton.GetComponent<AudioSource>().clip =
+            MusicManager.instance.GetAudioClip(MusicType.ButtonClick1);
         zoneRightMoveButton = this.transform.Find("Instance Zones Left Button").GetComponent<Button>();
         zoneRightMoveButton.onClick.AddListener(ButtonSlideRight);
+        //设置点击播放的音乐
+        zoneRightMoveButton.GetComponent<AudioSource>().clip =
+            MusicManager.instance.GetAudioClip(MusicType.ButtonClick1);
     }
 
     # region 按钮监听
@@ -133,6 +139,8 @@ public class InstanceZoneManager : BaseMonoBehaviour{
         }
         //重新设置头节点
         _instanceZoneControllersCircularDoubleLinkedList.First = _instanceZoneControllersCircularDoubleLinkedList.First.Next;
+        //播放移动音乐
+        zoneLeftMoveButton.GetComponent<AudioSource>().Play();
     }
     
     /// <summary>
@@ -170,6 +178,8 @@ public class InstanceZoneManager : BaseMonoBehaviour{
         }
         //重新设置头节点
         _instanceZoneControllersCircularDoubleLinkedList.First = _instanceZoneControllersCircularDoubleLinkedList.First.Previous;
+        //播放移动音乐
+        zoneRightMoveButton.GetComponent<AudioSource>().Play();
     }
     # endregion
 }

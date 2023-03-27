@@ -14,6 +14,7 @@ public class CharacterChooseController : BaseMonoBehaviour,IObserver,IPointerCli
     //背景图片
     private Image bgImage;
     private Image characterImage;
+    private AudioSource audioSource;
     #endregion
 
     #region 属性
@@ -35,6 +36,7 @@ public class CharacterChooseController : BaseMonoBehaviour,IObserver,IPointerCli
     #endregion
     
     protected override void FetchComponent() {
+        audioSource = GetComponent<AudioSource>();
         bgImage = GetComponent<Image>();
         Color bgColor = bgImage.material.color;
         bgColor.a = 155f / 255f;
@@ -105,6 +107,8 @@ public class CharacterChooseController : BaseMonoBehaviour,IObserver,IPointerCli
         message.Add("characterID",characterChooseInfo.characterID);
         message.Add("isClick",true);
         CharacterChooseManager.instance.NotifyObserver(message);
+        audioSource.clip = MusicManager.instance.GetAudioClip(MusicType.ButtonClick3);
+        audioSource.Play();
     }
     public void OnPointerEnter(PointerEventData eventData) {
         // bgImage.rectTransform.DOSizeDelta(this.bgImageChangeHegihtWidth,DOTWEEN_DURATION) ;

@@ -23,6 +23,8 @@ public class InstanceZoneController : BaseMonoBehaviour,IPointerEnterHandler,IPo
     private GameObject _lockGameObject;
     //当鼠标移到档案，显示的编辑GameObject
     private GameObject _drawGameObject;
+
+    // private AudioSource audioSource;
     # endregion
     
     # region 属性
@@ -58,6 +60,8 @@ public class InstanceZoneController : BaseMonoBehaviour,IPointerEnterHandler,IPo
         _drawGameObject = this.transform.Find("Image/Draw").gameObject;
         _zoneTextCN = this.transform.Find("TextBG/Text CN").GetComponent<Text>();
         _ZoneTextJP = this.transform.Find("TextBG/Text JP").GetComponent<Text>();
+        // audioSource = this.GetComponent<AudioSource>();
+        // audioSource.clip = MusicManager.instance.GetAudioClip(MusicType.SceneLoad);
     }
     /// <summary>
     /// 获取资源
@@ -116,6 +120,8 @@ public class InstanceZoneController : BaseMonoBehaviour,IPointerEnterHandler,IPo
         _drawGameObject.SetActive(true);
         //显示对应播放的video
         VidoPlayController.instance.PlayVideo(_instanceZoneInfo.zoneVideoURL);
+        
+       
     }
     /// <summary>
     /// 鼠标监听，当鼠标离开档案时，如果档案没有锁住就不显示 _drawGameObject
@@ -140,6 +146,9 @@ public class InstanceZoneController : BaseMonoBehaviour,IPointerEnterHandler,IPo
         Debug.Log("点击了"+_zoneTextCN.text);
         Dictionary<string, object> data = new Dictionary<string, object>();
         data.Add("instanceZoneInfo",_instanceZoneInfo);
+        
+        // MusicManager.instance.PlayAudioClip(MusicType.SceneLoad);
+      
         SceneDataManager.GetInstance().ToNewScene("DrawScene",data);
     }
 }
