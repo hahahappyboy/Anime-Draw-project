@@ -9,7 +9,7 @@ def read_arguments_five():
     opt.batch_size = 1
     opt.checkpoints_path = './checkpoints/five.pth'
     opt.const_input_path = './checkpoints/const_input_five.pt'
-    opt.use_gpu = "-1"
+    opt.gpu_ids = "-1"
     opt.model_id = "five"
     return opt
 
@@ -22,7 +22,7 @@ def read_arguments_darling():
     opt.batch_size = 1
     opt.checkpoints_path = './checkpoints/darling.pth'
     opt.const_input_path = './checkpoints/const_input_darling.pt'
-    opt.use_gpu = "-1"
+    opt.gpu_ids = "-1"
     opt.model_id = "darling"
     return opt
 

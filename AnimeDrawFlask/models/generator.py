@@ -42,6 +42,7 @@ class Generator(nn.Module):
         self.const_inputs = []
         self.const_inputs = torch.load(opt.const_input_path)
 
+
         """onnx"""
         ch = 64
         self.channels = [16*ch, 16*ch, 16*ch, 8*ch, 4*ch, 2*ch, 1*ch]
@@ -64,14 +65,12 @@ class Generator(nn.Module):
     def forward(self, input,input_class, z=None):
         seg = input
         """onnx"""
-        # seg.cuda()
-        """onnx"""
-        # input_const = self.const_inputs[input_class]
-        # seg = torch.cat((input_const, seg), dim=1)
-        dev = "cpu"
         """const_input_class"""
         input_const = self.const_inputs[input_class]
-        input_const = input_const.to("cpu")
+        if self.opt.gpu_ids != "-1":
+            input_const = input_const.cuda()
+        else:
+            input_const = input_const.to("cpu")
         seg = torch.cat((input_const, seg), dim=1)
 
         x = F.interpolate(seg, size=(self.init_W, self.init_H))

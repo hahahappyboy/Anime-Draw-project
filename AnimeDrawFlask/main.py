@@ -53,6 +53,9 @@ def preprocess_label(label,opt):
     cls = opt.label_class
     img_class = torch.tensor(int(cls))
     img_class = img_class.unsqueeze(0)
+    if opt.gpu_ids != "-1":
+        input_semantics = input_semantics.cuda()
+        img_class = img_class.cuda()
     return input_semantics,img_class
 """tensor转image"""
 def tens_to_im(tens):
@@ -90,6 +93,9 @@ def AnimeDraw():
         opt = config.read_arguments_darling()
         opt.label_class = label_class
         netEMA = Generator.getInstance(opt)
+
+    if opt.gpu_ids != "-1":
+        netEMA = netEMA.cuda()
 
     input_semantics,img_class = preprocess_label(label,opt)
     fake = netEMA(input_semantics, img_class)
