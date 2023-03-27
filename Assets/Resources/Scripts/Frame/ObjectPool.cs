@@ -8,7 +8,7 @@ namespace Frame {
     /// </summary>
     public class ObjectPool : BaseSingleTon<ObjectPool> {
         //对象池
-        private Dictionary<string, List<GameObject>> gameObjcetPool;
+        private  Dictionary<string, List<GameObject>> gameObjcetPool;
         
         protected ObjectPool() {
             gameObjcetPool = new Dictionary<string, List<GameObject>>();
@@ -25,6 +25,8 @@ namespace Frame {
             if (gameObjcetPool.ContainsKey(gameObjectName)&&
                 gameObjcetPool[gameObjectName].Count>0) {
                 gameObject = gameObjcetPool[gameObjectName][0];
+                Debug.Log("gameObjectCount="+gameObjcetPool[gameObjectName].Count);
+                Debug.Log("gameObject="+gameObject);
                 gameObject.SetActive(true);
                 gameObjcetPool[gameObjectName].RemoveAt(0);
             } else {
@@ -42,9 +44,16 @@ namespace Frame {
             gameObject.SetActive(false);
             if (gameObjcetPool.ContainsKey(gameObject.name)) {
                 gameObjcetPool[gameObject.name].Add(gameObject);
+                Debug.Log("RecycleGameObject里"+gameObjcetPool[gameObject.name].Count);
             } else {
                 gameObjcetPool.Add(gameObject.name,new List<GameObject>(){gameObject});
             }
+        }
+        /// <summary>
+        /// 清空对象池
+        /// </summary>
+        public  void ClearObjectPool() {
+            gameObjcetPool.Clear();
         }
         
     }

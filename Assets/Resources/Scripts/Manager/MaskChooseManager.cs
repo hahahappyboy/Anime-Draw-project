@@ -74,6 +74,7 @@ public class MaskChooseManager : BaseMonoBehaviour,IObserver
         for (int i = 0; i < currentShowMaskController.Count; i++) {
             ObjectPool.GetInstance().RecycleGameObject(currentShowMaskController[i].gameObject);
         }
+        currentShowMaskController.Clear();
         //调用对象池重新创建
         List<MaskChooseInfo> maskChooseInfoList = maskChooseItemDic[characterID];
         foreach (var maskChooseInfo in maskChooseInfoList) {

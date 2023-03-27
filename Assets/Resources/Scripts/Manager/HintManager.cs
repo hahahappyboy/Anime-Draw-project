@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Frame;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,7 +30,10 @@ public class HintManager : BaseMonoBehaviour {
     # region 监听
 
     private void BackButtonListener() {
+        //清空对象池
+        ObjectPool.GetInstance().ClearObjectPool();
         SceneDataManager.GetInstance().ToNewScene("MainScene");
+       
     }
 
     private void TeachButtonListener() {
