@@ -3,7 +3,7 @@
     {
       "characterID":0,
       "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/0"
+      "maskImageURL": "Texture2D/Mask/Darling/0/4"
     },
     {
       "characterID":0,
@@ -13,12 +13,37 @@
     {
       "characterID":0,
       "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/19"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/38"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/40"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
       "maskImageURL": "Texture2D/Mask/Darling/0/58"
     },
     {
       "characterID":0,
       "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/112"
+      "maskImageURL": "Texture2D/Mask/Darling/0/80"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/86"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/98"
     },
     {
       "characterID":0,
@@ -28,7 +53,12 @@
     {
       "characterID":0,
       "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/179"
+      "maskImageURL": "Texture2D/Mask/Darling/0/153"
+    },
+    {
+      "characterID":0,
+      "maskName":"02",
+      "maskImageURL": "Texture2D/Mask/Darling/0/178"
     },
     {
       "characterID":0,
@@ -38,17 +68,12 @@
     {
       "characterID":0,
       "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/295"
+      "maskImageURL": "Texture2D/Mask/Darling/0/398"
     },
     {
       "characterID":0,
       "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/382"
-    },
-    {
-      "characterID":0,
-      "maskName":"02",
-      "maskImageURL": "Texture2D/Mask/Darling/0/438"
+      "maskImageURL": "Texture2D/Mask/Darling/0/418"
     },
     {
       "characterID":2,
@@ -63,12 +88,37 @@
     {
       "characterID":2,
       "maskName":"五郎",
+      "maskImageURL": "Texture2D/Mask/Darling/2/113"
+    },
+    {
+      "characterID":2,
+      "maskName":"五郎",
       "maskImageURL": "Texture2D/Mask/Darling/2/134"
     },
     {
       "characterID":2,
       "maskName":"五郎",
+      "maskImageURL": "Texture2D/Mask/Darling/2/214"
+    },
+    {
+      "characterID":2,
+      "maskName":"五郎",
+      "maskImageURL": "Texture2D/Mask/Darling/2/366"
+    },
+    {
+      "characterID":2,
+      "maskName":"五郎",
       "maskImageURL": "Texture2D/Mask/Darling/2/386"
+    },
+    {
+      "characterID":2,
+      "maskName":"五郎",
+      "maskImageURL": "Texture2D/Mask/Darling/2/479"
+    },
+    {
+      "characterID":2,
+      "maskName":"五郎",
+      "maskImageURL": "Texture2D/Mask/Darling/2/511"
     },
     {
       "characterID":5,
@@ -78,27 +128,47 @@
     {
       "characterID":5,
       "maskName":"广",
+      "maskImageURL": "Texture2D/Mask/Darling/5/14"
+    },
+    {
+      "characterID":5,
+      "maskName":"广",
       "maskImageURL": "Texture2D/Mask/Darling/5/46"
     },
     {
       "characterID":5,
       "maskName":"广",
-      "maskImageURL": "Texture2D/Mask/Darling/5/64"
+      "maskImageURL": "Texture2D/Mask/Darling/5/81"
     },
     {
       "characterID":5,
       "maskName":"广",
-      "maskImageURL": "Texture2D/Mask/Darling/5/111"
+      "maskImageURL": "Texture2D/Mask/Darling/5/88"
     },
     {
       "characterID":5,
       "maskName":"广",
-      "maskImageURL": "Texture2D/Mask/Darling/5/265"
+      "maskImageURL": "Texture2D/Mask/Darling/5/132"
     },
     {
       "characterID":5,
       "maskName":"广",
-      "maskImageURL": "Texture2D/Mask/Darling/5/518"
+      "maskImageURL": "Texture2D/Mask/Darling/5/141"
+    },
+    {
+      "characterID":5,
+      "maskName":"广",
+      "maskImageURL": "Texture2D/Mask/Darling/5/150"
+    },
+    {
+      "characterID":5,
+      "maskName":"广",
+      "maskImageURL": "Texture2D/Mask/Darling/5/211"
+    },
+    {
+      "characterID":5,
+      "maskName":"广",
+      "maskImageURL": "Texture2D/Mask/Darling/5/377"
     },
     {
       "characterID":7,
@@ -108,17 +178,12 @@
     {
       "characterID":7,
       "maskName":"心",
-      "maskImageURL": "Texture2D/Mask/Darling/7/122"
-    },
-    {
-      "characterID":7,
-      "maskName":"心",
       "maskImageURL": "Texture2D/Mask/Darling/7/165"
     },
     {
       "characterID":7,
       "maskName":"心",
-      "maskImageURL": "Texture2D/Mask/Darling/7/270"
+      "maskImageURL": "Texture2D/Mask/Darling/7/192"
     },
     {
       "characterID":7,
@@ -133,22 +198,32 @@
     {
       "characterID":7,
       "maskName":"心",
-      "maskImageURL": "Texture2D/Mask/Darling/7/427"
+      "maskImageURL": "Texture2D/Mask/Darling/7/395"
     },
     {
       "characterID":7,
       "maskName":"心",
-      "maskImageURL": "Texture2D/Mask/Darling/7/465"
+      "maskImageURL": "Texture2D/Mask/Darling/7/424"
     },
     {
       "characterID":7,
       "maskName":"心",
-      "maskImageURL": "Texture2D/Mask/Darling/7/528"
+      "maskImageURL": "Texture2D/Mask/Darling/7/432"
+    },
+    {
+      "characterID":7,
+      "maskName":"心",
+      "maskImageURL": "Texture2D/Mask/Darling/7/468"
+    },
+    {
+      "characterID":7,
+      "maskName":"心",
+      "maskImageURL": "Texture2D/Mask/Darling/7/527"
     },
     {
       "characterID":9,
       "maskName":"满",
-      "maskImageURL": "Texture2D/Mask/Darling/9/157"
+      "maskImageURL": "Texture2D/Mask/Darling/9/189"
     },
     {
       "characterID":9,
@@ -158,17 +233,27 @@
     {
       "characterID":9,
       "maskName":"满",
-      "maskImageURL": "Texture2D/Mask/Darling/9/404"
+      "maskImageURL": "Texture2D/Mask/Darling/9/191"
     },
     {
       "characterID":9,
       "maskName":"满",
-      "maskImageURL": "Texture2D/Mask/Darling/9/467"
+      "maskImageURL": "Texture2D/Mask/Darling/9/273"
+    },
+    {
+      "characterID":9,
+      "maskName":"满",
+      "maskImageURL": "Texture2D/Mask/Darling/9/304"
     },
     {
       "characterID":12,
       "maskName":"莓",
       "maskImageURL": "Texture2D/Mask/Darling/12/31"
+    },
+    {
+      "characterID":12,
+      "maskName":"莓",
+      "maskImageURL": "Texture2D/Mask/Darling/12/37"
     },
     {
       "characterID":12,
@@ -188,6 +273,11 @@
     {
       "characterID":12,
       "maskName":"莓",
+      "maskImageURL": "Texture2D/Mask/Darling/12/140"
+    },
+    {
+      "characterID":12,
+      "maskName":"莓",
       "maskImageURL": "Texture2D/Mask/Darling/12/163"
     },
     {
@@ -198,17 +288,17 @@
     {
       "characterID":12,
       "maskName":"莓",
-      "maskImageURL": "Texture2D/Mask/Darling/12/171"
-    },
-    {
-      "characterID":12,
-      "maskName":"莓",
       "maskImageURL": "Texture2D/Mask/Darling/12/218"
     },
     {
       "characterID":12,
       "maskName":"莓",
-      "maskImageURL": "Texture2D/Mask/Darling/12/409"
+      "maskImageURL": "Texture2D/Mask/Darling/12/356"
+    },
+    {
+      "characterID":12,
+      "maskName":"莓",
+      "maskImageURL": "Texture2D/Mask/Darling/12/358"
     }
   ]
 }

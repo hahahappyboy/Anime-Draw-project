@@ -40,6 +40,7 @@ generate_manager.send_web_request = util.cs_generator(function()
         form:AddField("label_class", label_class)
 
         local www =  CS.UnityEngine.Networking.UnityWebRequest.Post(CS.Config.POST_HTTP_URL, form);
+        --print(CS.Config.POST_HTTP_URL)
         -- 发送请求
         coroutine.yield(www:SendWebRequest())
         if www.isDone then
