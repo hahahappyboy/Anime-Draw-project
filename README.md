@@ -59,6 +59,7 @@ Unity版本：2020.3.28
 **（1）人像卡通化APP**
 
 [https://blog.csdn.net/iiiiiiimp/article/details/118701276](https://blog.csdn.net/iiiiiiimp/article/details/118701276)
+
  <img src="https://img-blog.csdnimg.cn/20210713192738503.png" width=" 60%">
  
 **（2）欢迎各位有志之士加入我们团队**
