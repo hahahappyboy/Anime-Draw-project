@@ -20,7 +20,9 @@
 
 # 使用教程
 本项目客户端是用Unity开发的，后端使用的是FlaskWeb
+
 Unity版本：2020.3.28
+
 后端：Flask+Pytorch
 
 **（1）在github上下载本项目**
