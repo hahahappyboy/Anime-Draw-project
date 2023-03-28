@@ -19,6 +19,7 @@
 
 
 # 使用教程
+
 本项目客户端是用Unity开发的，后端使用的是FlaskWeb
 
 Unity版本：2020.3.28
@@ -29,7 +30,8 @@ Unity版本：2020.3.28
 
 **（2）导入后端模型** 使用python编辑器(如pycharm)打开项目下的AnimeDrawFlask，这是后端代码，并安装项目需要的库主要是Flask和Pytorch。然后在网盘上下载checkpoints文件并放在AnimeDrawFlask目录下。
 
-网盘链接: [https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp](https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp) 
+网盘链接: [https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp](https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp)
+
 提取码: iimp 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e992242d94254dfa8925e2118652d258.png)
@@ -41,6 +43,7 @@ Unity版本：2020.3.28
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2af013bc75724b2ea4c21eb49f7974a5.png)
 
 **（4）打开Unity** 用Unity打开整个Anime-Draw-project，找到Assets/Resources/Scripts/Config.cs文件的`string DOWNLOAD_HTTP_URL`，将值改为刚刚后端显示的IP地址，这样Unity就能找到后端程序了
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/34171761a08a42978d1e91fde5e57b21.png)
 
 **（5）运行Unity**
@@ -52,6 +55,7 @@ Unity版本：2020.3.28
  <img src="https://img-blog.csdnimg.cn/ac8993b6132c4839b0ab6adcd5b74e35.png" width="80%">
  
 # 其他
+
 **（1）人像卡通化APP**
 
 [https://blog.csdn.net/iiiiiiimp/article/details/118701276](https://blog.csdn.net/iiiiiiimp/article/details/118701276)
@@ -63,5 +67,7 @@ Unity版本：2020.3.28
 
 
 # 写在后面
+
 Emmm，还没想要写啥，先附个图吧，这是梦开始的地方
+
  <img src="https://img-blog.csdnimg.cn/1269aab0378d40aabc88256a3ac3d81d.jpeg" width=" 60%">
