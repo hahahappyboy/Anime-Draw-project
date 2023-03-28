@@ -25,12 +25,16 @@ Unity版本：2020.3.28
 **（1）在github上下载本项目**
 
 **（2）导入后端模型** 使用python编辑器(如pycharm)打开项目下的AnimeDrawFlask，这是后端代码，并安装项目需要的库主要是Flask和Pytorch。然后在网盘上下载checkpoints文件并放在AnimeDrawFlask目录下。
+
 网盘链接: [https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp](https://pan.baidu.com/s/1TTB8GPN474qk9R8jtPmNBw?pwd=iimp) 
 提取码: iimp 
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e992242d94254dfa8925e2118652d258.png)
 
 **（3）运行后端程序** 运行AnimeDrawFlask下的main文件，如果控制台出现以下提示，就说明运行成功了。记住下面显示的IP地址，这就是后端程序的IP地址，之后Unity访问的就是这个IP地址。我这里是`http://192.168.42.130:5000/`，你们显示的IP地址一定不会跟我的一样，可以访问一下这个IP地址，会出现面码。
+
 **注意：如果你电脑的显存小于12G请将config.py文件的`opt.gpu_ids`值改为-1，表示将会使用CPU运算AI绘画，值不为1会使用GPU** 
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2af013bc75724b2ea4c21eb49f7974a5.png)
 
 **（4）打开Unity** 用Unity打开整个Anime-Draw-project，找到Assets/Resources/Scripts/Config.cs文件的`string DOWNLOAD_HTTP_URL`，将值改为刚刚后端显示的IP地址，这样Unity就能找到后端程序了
