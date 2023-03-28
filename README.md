@@ -46,7 +46,7 @@ Unity版本：2020.3.28
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/34171761a08a42978d1e91fde5e57b21.png)
 
-**（5）运行Unity**
+**（5）运行Unity**  找打Assets/Scenes/MainScene，运行MainScene
 
 # 敬请期待
 
