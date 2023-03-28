@@ -13,7 +13,7 @@
 
 [![](https://i1.hdslb.com/bfs/archive/9a32c55b90ac9485d02dc1a50dc1fa94d12b3111.jpg@640w_400h_1c.webp)](https://player.bilibili.com/player.html?aid=909214797&bvid=BV1gM4y1U79m&cid=1073822589&page=1)
 
-[![](https://bb-embed.herokuapp.com/embed?v=BV1jS4y1w7SW)](https://player.bilibili.com/player.html?aid=909214797&bvid=BV1gM4y1U79m&cid=1073822589&page=1)
+
 
 
 # 部分界面展示
