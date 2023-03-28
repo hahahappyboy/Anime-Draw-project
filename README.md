@@ -9,6 +9,8 @@
  
 # 演示视频
 
+[video(video-9PmraOjK-1679982151437)(type-bilibili)(url-https://player.bilibili.com/player.html?aid=909214797)(image-https://img-blog.csdnimg.cn/img_convert/ecfeecbe028dfe09de4d928921628845.jpeg)(title-Unity和GAN实现AI绘画五等分的新娘、国家队02)]
+
 # 部分界面展示
 **左边是画板，右边是AI生成的**
 
