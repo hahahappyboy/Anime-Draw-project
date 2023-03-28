@@ -58,15 +58,12 @@ Unity版本：2020.3.28
 
 **（1）人像卡通化APP**
 
-[https://blog.csdn.net/iiiiiiimp/article/details/118701276](https://blog.csdn.net/iiiiiiimp/article/details/118701276)
+博客:[https://blog.csdn.net/iiiiiiimp/article/details/118701276](https://blog.csdn.net/iiiiiiimp/article/details/118701276)
 
-[https://github.com/hahahappyboy/GANForCartoon](https://github.com/hahahappyboy/GANForCartoon)
+源码:[https://github.com/hahahappyboy/GANForCartoon](https://github.com/hahahappyboy/GANForCartoon)
 
  <img src="https://img-blog.csdnimg.cn/20210713192738503.png" width=" 60%">
  
-**（2）欢迎各位有志之士加入我们团队**
-
-[http://www.cs.cqu.edu.cn/info/1275/3799.htm](http://www.cs.cqu.edu.cn/info/1275/3799.htm)
 
 
 # 写在后面
