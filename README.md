@@ -9,7 +9,8 @@
  
 # 演示视频
 
-[![Watch the video](image-https://img-blog.csdnimg.cn/img_convert/ecfeecbe028dfe09de4d928921628845.jpeg)](https://www.bilibili.com/video/BV1gM4y1U79m)
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+
 
 
 # 部分界面展示
