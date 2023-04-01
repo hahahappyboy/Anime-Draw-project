@@ -15,12 +15,12 @@ using Object = UnityEngine.Object;
  /// </summary>
 public class InstanceZoneManager : BaseMonoBehaviour{
     # region 组件
-    //档案的父物体
-    private Transform zonesParent;
     //档案向右按的按钮
     private Button zoneRightMoveButton;
     //档案向左移动的按钮
     private Button zoneLeftMoveButton;
+    //View
+    private InstanceZoneMangerView view;
     # endregion
     
     # region 属性
@@ -52,10 +52,8 @@ public class InstanceZoneManager : BaseMonoBehaviour{
     /// 获取本地档案信息
     /// </summary>
     protected override void GetResources() {
-        //获取本地档案Json
-        TextAsset zoneTextAsset = Resources.Load<TextAsset>(Config.INSTANCEZONEINFO_JSON_PATH);
-        //json转化成list
-        instanceZoneInfoList = JsonUtils.Json2Class<InstanceZoneInfoItems>(zoneTextAsset.text).instanceZoneInfoList;
+        //用Model层获取List<InstanceZoneInfo>
+        instanceZoneInfoList = InstanceZoneMangerModel.GetInstanceZoneInfoItems();
     }
 
     /// <summary>
@@ -64,14 +62,9 @@ public class InstanceZoneManager : BaseMonoBehaviour{
     protected override void InitZoneLayout() {
         if (instanceZoneInfoList==null) Debug.LogWarning("档案初始化失败，没有获得信息");
         _instanceZoneControllersCircularDoubleLinkedList = new CircularDoubleLinkedList<InstanceZoneController>();
-        //加载档案
-        Object zoneLayoutPrefab = Resources.Load<Object>(Config.ZONE_LAYOUT_PREFAB_PATH);
         for (int i = 0; i < instanceZoneInfoList.Count; i++) {
-            GameObject zoneLayoutGO = Instantiate(zoneLayoutPrefab, zonesParent) as GameObject;
-            zoneLayoutGO.name = instanceZoneInfoList[i].zoneTextCN;
-            zoneLayoutGO.transform.localScale = Vector3.one;
+            GameObject zoneLayoutGO = view.CreateInstanceZoneGameObject(instanceZoneInfoList[i]);
             InstanceZoneController zoneController = zoneLayoutGO.GetComponent<InstanceZoneController>();
-            zoneController.SetZoneInfo(instanceZoneInfoList[i]);
             //加入循环链表
             CircularDoubleLinkedListNode<InstanceZoneController> zoneControllerNode =
                 new CircularDoubleLinkedListNode<InstanceZoneController>(zoneController);
@@ -83,17 +76,15 @@ public class InstanceZoneManager : BaseMonoBehaviour{
     /// 获取所需要的组件
     /// </summary> 
     protected override void FetchComponent() {
-        zonesParent = this.transform.Find("Viewport/Content").transform;
-        zoneLeftMoveButton = this.transform.Find("Instance Zones Right Button").GetComponent<Button>();
+        view = GetComponent<InstanceZoneMangerView>();
+        view.FetchView();
+        zoneLeftMoveButton = view.GetZoneLeftMoveButton();
         zoneLeftMoveButton.onClick.AddListener(ButtonSlideLeft);
-        //设置点击播放的音乐
-        zoneLeftMoveButton.GetComponent<AudioSource>().clip =
-            MusicManager.instance.GetAudioClip(MusicType.ButtonClick1);
-        zoneRightMoveButton = this.transform.Find("Instance Zones Left Button").GetComponent<Button>();
+        zoneRightMoveButton = view.GetZoneRightMoveButton();
         zoneRightMoveButton.onClick.AddListener(ButtonSlideRight);
-        //设置点击播放的音乐
-        zoneRightMoveButton.GetComponent<AudioSource>().clip =
-            MusicManager.instance.GetAudioClip(MusicType.ButtonClick1);
+
+        
+        
     }
 
     # region 按钮监听

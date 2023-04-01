@@ -43,7 +43,6 @@ Shader "Unlit/VideoPlayerShader"
                 float4 vertex : SV_POSITION;
             };
 
-          
 
             v2f vert (c2v v)
             {
